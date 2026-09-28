@@ -1,0 +1,34 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# IDE and local user files
+.vs/
+.idea/
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Unreal autosaves and logs
+*.tmp
+*.log
+*.dmp
+
+# Visual Studio / Rider build output
+*.pdb
+*.obj
+*.ilk
+
+# Python cache (if tooling is added later)
+__pycache__/
+*.pyc
