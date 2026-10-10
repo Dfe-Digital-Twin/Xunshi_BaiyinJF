@@ -1,0 +1,19 @@
+{
+	"FileVersion": 3,
+	"Version": 2,
+	"VersionName": "0.2.0",
+	"FriendlyName": "Codex UE Bridge",
+	"Description": "Minimal local bridge for Blueprint graph automation.",
+	"Category": "Scripting",
+	"CreatedBy": "Codex",
+	"CanContainContent": false,
+	"EnabledByDefault": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CodexUEBridge",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	]
+}

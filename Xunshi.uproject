@@ -21,6 +21,14 @@
 		{
 			"Name": "DatasmithImporter",
 			"Enabled": true
+		},
+		{
+			"Name": "PixelStreaming",
+			"Enabled": true
+		},
+		{
+			"Name": "VaRestX",
+			"Enabled": true
 		}
 	]
 }
