@@ -23,11 +23,11 @@
 			"Enabled": true
 		},
 		{
-			"Name": "PixelStreaming",
+			"Name": "VaRestX",
 			"Enabled": true
 		},
 		{
-			"Name": "VaRestX",
+			"Name": "PixelStreaming2",
 			"Enabled": true
 		}
 	]

@@ -32,3 +32,4 @@ Thumbs.db
 # Python cache (if tooling is added later)
 __pycache__/
 *.pyc
+/.svn

@@ -23,6 +23,11 @@ void AXunshiInspectionPlayerController::BeginPlay()
 		ControlledPawn->bUseControllerRotationPitch = true;
 		ControlledPawn->bUseControllerRotationYaw = true;
 		ControlledPawn->bUseControllerRotationRoll = false;
+		// 【新增】：记录初始 FOV
+		if (UCameraComponent* Camera = ControlledPawn->FindComponentByClass<UCameraComponent>())
+		{
+			InitialFieldOfView = Camera->FieldOfView;
+		}
 	}
 	FInputModeGameAndUI InputMode;
 	InputMode.SetHideCursorDuringCapture(false);
@@ -106,6 +111,15 @@ void AXunshiInspectionPlayerController::Zoom(float Value)
 	if (UCameraComponent* Camera = GetPawn() ? GetPawn()->FindComponentByClass<UCameraComponent>() : nullptr)
 	{
 		Camera->SetFieldOfView(FMath::Clamp(Camera->FieldOfView - Value * ZoomSpeed, MinFieldOfView, MaxFieldOfView));
+	}
+}
+
+void AXunshiInspectionPlayerController::ResetZoom()
+{
+	if (UCameraComponent* Camera = GetPawn() ? GetPawn()->FindComponentByClass<UCameraComponent>() : nullptr)
+	{
+		// 将 FOV 重置为你想要的初始值（比如 90度）
+		Camera->SetFieldOfView(InitialFieldOfView);
 	}
 }
 

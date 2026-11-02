@@ -41,6 +41,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Inspection Controls")
 	float MaxFieldOfView = 90.0f;
 
+	UPROPERTY(BlueprintReadOnly, Category = "Inspection")
+	float InitialFieldOfView = 90.0f;
+
+	UFUNCTION(BlueprintCallable, Category = "Inspection")
+	void ResetZoom();
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void PlayerTick(float DeltaSeconds) override;
